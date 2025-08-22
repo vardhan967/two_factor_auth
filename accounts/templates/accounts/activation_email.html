@@ -1,0 +1,41 @@
+<!-- templates/accounts/activation_email.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activate Your Account</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 20px auto; background-color: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #333333; }
+        .content { text-align: left; color: #555555; line-height: 1.6; }
+        .button-container { text-align: center; margin: 30px 0; }
+        .button { background-color: #007bff; color: #ffffff; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; }
+        .footer { text-align: center; margin-top: 30px; font-size: 12px; color: #999999; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to Secure Auth!</h1>
+        </div>
+        <div class="content">
+            <p>Hello {{ user.username }},</p>
+            <p>Thank you for registering. Please click the button below to activate your account and complete your setup.</p>
+        </div>
+        <div class="button-container">
+            <a href="{{ activation_link }}" class="button">Activate Account</a>
+        </div>
+        <div class="content">
+            <p>If the button above does not work, please copy and paste the following link into your browser:</p>
+            <p><a href="{{ activation_link }}">{{ activation_link }}</a></p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 Secure Auth Showcase by Prakash Vardhan. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
